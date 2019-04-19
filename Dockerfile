@@ -16,7 +16,7 @@ COPY . .
 RUN yarn && NODE_ENV=production yarn task build:server:binary
 
 # We deploy with ubuntu so that devs have a familiar environment.
-FROM ubuntu:18.04
+FROM golang
 
 RUN apt-get update && apt-get install -y \
 	openssl \
